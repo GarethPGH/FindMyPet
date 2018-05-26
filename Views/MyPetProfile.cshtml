@@ -1,0 +1,32 @@
+﻿@model FindMyPet.Models.FindMyPetContext
+
+@{
+    ViewBag.Title = "MyPetProfile"; 
+}
+
+<h2>MyPets</h2>
+<div class= "table-responsive">
+    <table class= "table table-bordered table-condensed table-responsive-striped">
+        <thead>
+            <tr>
+                <th>UserName</th>
+                <th>RealName</th>
+                <th>Pet List</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (FindMyPet.FindMyPetContext.owner PetOwner in FindMyPet.Models.FindMyPetContext)
+            {
+                <tr>
+                    <td>
+                        <a href = "#" title="Add Pet"></a>
+                    </td>
+                    <td>
+                        @Prof.owner.UserName.GetUserName()
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
