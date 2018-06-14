@@ -151,3 +151,5 @@ C:\Users\Owner\source\repos\FindMyPetv2\FindMyPetv2\obj\Debug\FindMyPetv2.csproj
 C:\Users\Owner\source\repos\FindMyPetv2\FindMyPetv2\obj\Debug\FindMyPetv2.dll
 C:\Users\Owner\source\repos\FindMyPetv2\FindMyPetv2\obj\Debug\FindMyPetv2.pdb
 C:\Users\Owner\source\repos\FindMyPetv2\FindMyPetv2\obj\Debug\FindMyPetv2.csprojResolveAssemblyReference.cache
+C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.csprojAssemblyReference.cache
+C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.csproj.CoreCompileInputs.cache

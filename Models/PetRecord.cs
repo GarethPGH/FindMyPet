@@ -5,17 +5,30 @@ namespace FindMyPet.Models
 {
     public class PetRecord
     {
-        private ICollection<string> PetName;
+        [Key]
+        private int PetID { get; set; }
 
-        public ICollection<string> GetName()
-        {
-            return PetName;
-        }
+        [Key, ForeignKey("Owner"), Column(Order = 0)]
+        private int OwnerID { get; set; }
 
-        public void SetName(ICollection<string> value)
-        {
-            PetName = value;
-        }
+        private string OwnerName { get; set; }
+
+        [Required]
+        private string PetName { get; set; }
+        [Required]
+        private string Species { get; set; }
+
+        private string Breed { get; set; }
+
+        [Required]
+        private string Description { get; set; }
+
+        private string ImageURL { get; set; }
+
+        private string SpecialNeeds { get; set; }
+
+        private string LocationLost { get; set; }
+
     }
 
 }

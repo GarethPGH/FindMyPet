@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMyPetv2", "FindMyPetv2.csproj", "{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FindMyPetWebLayout", "FindMyPetWebLayout", "{13D9477A-82AD-4E66-88DE-C8CB19226C9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Javascript", "Javascript", "{AEFCA104-4943-4450-962C-F3AC3DE62537}"
+	ProjectSection(SolutionItems) = preProject
+		Placeholder.js = Placeholder.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{9F339014-279D-4D30-A488-641004E80DFE}"
+	ProjectSection(SolutionItems) = preProject
+		Layout.html = Layout.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stylesheets", "Stylesheets", "{CDBAD2F1-9D8E-4312-AE4D-D3C65A358D3E}"
+	ProjectSection(SolutionItems) = preProject
+		FMPStyling.css = FMPStyling.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Android = Debug|Android
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iOS = Debug|iOS
+		Debug|Windows-ARM = Debug|Windows-ARM
+		Debug|Windows-x64 = Debug|Windows-x64
+		Debug|Windows-x86 = Debug|Windows-x86
+		Release|Android = Release|Android
+		Release|Any CPU = Release|Any CPU
+		Release|iOS = Release|iOS
+		Release|Windows-ARM = Release|Windows-ARM
+		Release|Windows-x64 = Release|Windows-x64
+		Release|Windows-x86 = Release|Windows-x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Android.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|iOS.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-ARM.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-x64.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Debug|Windows-x86.Build.0 = Debug|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Android.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Android.Build.0 = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|iOS.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|iOS.Build.0 = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-ARM.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-ARM.Build.0 = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-x64.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-x64.Build.0 = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-x86.ActiveCfg = Release|Any CPU
+		{0DBEC781-5B0C-4897-BA03-BDC9A0F35DA5}.Release|Windows-x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEFCA104-4943-4450-962C-F3AC3DE62537} = {13D9477A-82AD-4E66-88DE-C8CB19226C9A}
+		{9F339014-279D-4D30-A488-641004E80DFE} = {13D9477A-82AD-4E66-88DE-C8CB19226C9A}
+		{CDBAD2F1-9D8E-4312-AE4D-D3C65A358D3E} = {13D9477A-82AD-4E66-88DE-C8CB19226C9A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63657684-3D87-45A9-B768-8D39817018C1}
+	EndGlobalSection
+EndGlobal
