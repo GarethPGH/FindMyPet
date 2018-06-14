@@ -71,12 +71,12 @@
     <PackageReference Include="Microsoft.Net.Compilers" Version="2.1.0" />
     <PackageReference Include="Microsoft.Web.Infrastructure" Version="1.0.0.0" />
     <PackageReference Include="Modernizr" Version="2.8.3" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="6.0.4" />
     <PackageReference Include="NuGet.CommandLine" Version="4.6.2" />
     <PackageReference Include="popper.js" Version="1.14.0" />
     <PackageReference Include="Respond" Version="1.4.2" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" Version="4.4.0" />
-    <PackageReference Include="WebGrease" Version="1.6.0" />
+    <PackageReference Include="WebGrease" Version="1.5.2.14234" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Activities.Build">

@@ -17,13 +17,14 @@ namespace FindMyPet.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        public FindMyPetContext() : base("name=FindMyPetContext")
-        {
-        }
+        public FindMyPetContext() : base("name=FindMyPetContext") { }
 
-        public System.Data.Entity.DbSet<FindMyPet.Models.OwnerProfile> Profiles { get; set; }
+            public DbSet<OwnerProfile> Profiles { get; set; }
 
-        //public System.Data.EntityClient.DbSet<FindMyPet.Models.PetRecord> Pets { get; set; }
-           
+            public DbSet<PetRecord> Pets { get; set; }
+        
     }
+
+
 }
+

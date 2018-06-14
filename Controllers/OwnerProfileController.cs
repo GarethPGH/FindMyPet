@@ -87,7 +87,7 @@ namespace FindMyPet.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(Profile).State = EntityState.Modified;
+                db.Entry(Profile).State = System.Data.Entity.EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("MyPetProfile");
             }

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using FindMyPet.Controllers;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FindMyPet.Models
 {

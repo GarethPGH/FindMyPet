@@ -1763,6 +1763,11 @@
             Represents "Layouts" category.
             </summary>
         </member>
+        <member name="F:Microsoft.AspNet.Scaffolding.Categories.Identity">
+            <summary>
+            Represents "Identity" category.
+            </summary>
+        </member>
         <member name="T:Microsoft.AspNet.Scaffolding.IServiceRegistrar">
             <summary>
             This interface provides a mechanism for code generators to register services in advance of code generation operations.
