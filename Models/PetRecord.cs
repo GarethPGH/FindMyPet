@@ -10,8 +10,9 @@ namespace FindMyPet.Models
         [Key]
         private int PetID { get; set; }
 
-        [Key, ForeignKey("Owner"), Column(Order = 0)]
-        private int OwnerID { get; set; }
+        [ForeignKey("OwnerId")]
+        //I have a feeling that the FK on PetRecord should not match OwnerProfile
+        private int Owner { get; set; }
 
         private string OwnerName { get; set; }
 

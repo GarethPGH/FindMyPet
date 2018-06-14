@@ -261,3 +261,4 @@ C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.csproj.CoreCompileIn
 C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.csproj.CopyComplete
 C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.dll
 C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.pdb
+C:\Users\Gorat\source\repos\FindMyPet\obj\Debug\FindMyPetv2.csprojAssemblyReference.cache
