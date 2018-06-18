@@ -5,14 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FindMyPet.Models
 {
-    public class PetRecord
+    public partial class PetRecord
     {
         [Key]
         private int PetID { get; set; }
-
-        [ForeignKey("OwnerId")]
-        //I have a feeling that the FK on PetRecord should not match OwnerProfile
-        private int Owner { get; set; }
 
         private string OwnerName { get; set; }
 
@@ -31,6 +27,10 @@ namespace FindMyPet.Models
         private string SpecialNeeds { get; set; }
 
         private string LocationLost { get; set; }
+
+
+        public PetRecord Pets { get; set; }
+        private int OwnerId { get; set; }
 
     }
 

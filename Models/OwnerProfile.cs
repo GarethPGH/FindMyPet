@@ -17,7 +17,7 @@ namespace FindMyPet.Models
     {
         
         [Required]
-        [Key,ForeignKey("Owner")]
+        [Key]
         private int OwnerID { get; set; }
 
         [Required]
@@ -44,8 +44,7 @@ namespace FindMyPet.Models
         [RegularExpression(@"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$")]
         private object Email { get; set; }
 
-        //I have a feeling that the FK should be here
-        public virtual PetRecord Pets { get; set; }
 
+        public ICollection<PetRecord> Pets { get; set; }
     }
 }
