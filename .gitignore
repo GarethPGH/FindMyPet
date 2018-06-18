@@ -5,6 +5,7 @@ _ReSharper.*
 bin
 obj
 packages
+Migrations
 
 ### Windows ###
 # Windows thumbnail cache files
