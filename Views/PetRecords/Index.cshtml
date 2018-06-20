@@ -1,0 +1,83 @@
+﻿@model IEnumerable<FindMyPet.Models.PetRecord>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Owner.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Species)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Breed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpecialNeeds)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationLost)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Owner.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Species)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Breed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImageURL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpecialNeeds)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationLost)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PetID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.PetID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.PetID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

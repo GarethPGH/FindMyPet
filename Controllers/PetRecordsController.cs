@@ -9,115 +9,116 @@ using System.Web;
 using System.Web.Mvc;
 using FindMyPet.Models;
 
-
-
-namespace FindMyPet.Controllers
+namespace FindMyPetv2.Controllers
 {
-    public class OwnerProfileController : Controller
+    public class PetRecordsController : Controller
     {
         private FindMyPetContext db = new FindMyPetContext();
 
-        // GET: api/OwnerProfile
-        public async Task<ActionResult> MyPetProfile()
+        // GET: PetRecords
+        public async Task<ActionResult> Index()
         {
-            
-                return View(db.Profiles.ToList());
-                // return View(await db.Pets.ToList());
-            
+            var pets = db.Pets.Include(p => p.Owner);
+            return View(await pets.ToListAsync());
         }
-        // GET: Products/Details/5
+
+        // GET: PetRecords/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OwnerProfile Profile = await db.Profiles.FindAsync(id);
-            if (Profile == null)
+            PetRecord petRecord = await db.Pets.FindAsync(id);
+            if (petRecord == null)
             {
                 return HttpNotFound();
             }
-            return View(Profile);
+            return View(petRecord);
         }
 
-        // GET: Products/Create
+        // GET: PetRecords/Create
         public ActionResult Create()
         {
+            ViewBag.OwnerID = new SelectList(db.Profiles, "OwnerID", "UserName");
             return View();
         }
 
-        // POST: Products/Create
+        // POST: PetRecords/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "OwnerID,UserName,PassHash,FName,LName,Pets,Zipcode,PhoneNum,Email")] OwnerProfile Profile)
+        public async Task<ActionResult> Create([Bind(Include = "PetID,PetName,Species,Breed,Description,ImageURL,SpecialNeeds,LocationLost,OwnerID")] PetRecord petRecord)
         {
             if (ModelState.IsValid)
             {
-                db.Profiles.Add(Profile);
+                db.Pets.Add(petRecord);
                 await db.SaveChangesAsync();
-                return RedirectToAction("MyPetProfile");
+                return RedirectToAction("Index");
             }
 
-            return View(Profile);
+            ViewBag.OwnerID = new SelectList(db.Profiles, "OwnerID", "UserName", petRecord.OwnerID);
+            return View(petRecord);
         }
 
-        // GET: Products/Edit/5
+        // GET: PetRecords/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OwnerProfile Profile = await db.Profiles.FindAsync(id);
-            if (Profile == null)
+            PetRecord petRecord = await db.Pets.FindAsync(id);
+            if (petRecord == null)
             {
                 return HttpNotFound();
             }
-            return View(Profile);
+            ViewBag.OwnerID = new SelectList(db.Profiles, "OwnerID", "UserName", petRecord.OwnerID);
+            return View(petRecord);
         }
 
-        // POST: Products/Edit/5
+        // POST: PetRecords/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "OwnerID,UserName,PassHash,FName,LName,Pets,Zipcode,PhoneNum,Email")] OwnerProfile Profile)
+        public async Task<ActionResult> Edit([Bind(Include = "PetID,PetName,Species,Breed,Description,ImageURL,SpecialNeeds,LocationLost,OwnerID")] PetRecord petRecord)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(Profile).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(petRecord).State = System.Data.Entity.EntityState.Modified;
                 await db.SaveChangesAsync();
-                return RedirectToAction("MyPetProfile");
+                return RedirectToAction("Index");
             }
-            return View(Profile);
+            ViewBag.OwnerID = new SelectList(db.Profiles, "OwnerID", "UserName", petRecord.OwnerID);
+            return View(petRecord);
         }
 
-        // GET: Products/Delete/5
+        // GET: PetRecords/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            OwnerProfile Profile = await db.Profiles.FindAsync(id);
-            if (Profile == null)
+            PetRecord petRecord = await db.Pets.FindAsync(id);
+            if (petRecord == null)
             {
                 return HttpNotFound();
             }
-            return View(Profile);
+            return View(petRecord);
         }
 
-        // POST: Products/Delete/5
+        // POST: PetRecords/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
-            OwnerProfile Profile = await db.Profiles.FindAsync(id);
-            db.Profiles.Remove(Profile);
+            PetRecord petRecord = await db.Pets.FindAsync(id);
+            db.Pets.Remove(petRecord);
             await db.SaveChangesAsync();
-            return RedirectToAction("MyPetProfile");
+            return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)

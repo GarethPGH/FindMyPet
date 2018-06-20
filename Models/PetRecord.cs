@@ -26,10 +26,8 @@ namespace FindMyPet.Models
 
         //Species and Breed will eventually be taken from a table of species and breeds, for now species is dog and breeds is user defined
         [Required]
-        public string Species {
-            get { return Species; }
-            set { Species = "Dog"; }
-        }
+        public string Species { get; set; }
+        
             
         public string Breed { get; set; }
 

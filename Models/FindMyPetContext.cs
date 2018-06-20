@@ -17,9 +17,15 @@ namespace FindMyPet.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        public FindMyPetContext() : base("name=FindMyPetContext") { }
+        public class NewFindMyPetContext : CreateDatabaseIfNotExists<FindMyPetContext>
+        {
+            protected override void Seed(FindMyPetContext context)
+            {
+                base.Seed(context);
+            }
+        }
 
-            public DbSet<OwnerProfile> Profiles { get; set; }
+        public DbSet<OwnerProfile> Profiles { get; set; }
 
             public DbSet<PetRecord> Pets { get; set; }
         

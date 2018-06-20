@@ -228,9 +228,15 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OwnerProfileController.cs" />
+    <Compile Include="Controllers\PetRecordsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806182318441_OwnerProfileWithPetRecords.cs" />
+    <Compile Include="Migrations\201806182318441_OwnerProfileWithPetRecords.Designer.cs">
+      <DependentUpon>201806182318441_OwnerProfileWithPetRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FindMyPetContext.cs" />
     <Compile Include="Models\OwnerProfile.cs" />
     <Compile Include="Models\PetRecord.cs" />
@@ -334,6 +340,11 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\PetRecords\Create.cshtml" />
+    <Content Include="Views\PetRecords\Delete.cshtml" />
+    <Content Include="Views\PetRecords\Details.cshtml" />
+    <Content Include="Views\PetRecords\Edit.cshtml" />
+    <Content Include="Views\PetRecords\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,6 +354,11 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806182318441_OwnerProfileWithPetRecords.resx">
+      <DependentUpon>201806182318441_OwnerProfileWithPetRecords.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

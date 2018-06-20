@@ -1,0 +1,96 @@
+﻿@model FindMyPet.Models.PetRecord
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>PetRecord</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Owner.UserName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Owner.UserName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PetName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PetName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Species)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Species)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Breed)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Breed)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ImageURL)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ImageURL)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SpecialNeeds)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SpecialNeeds)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LocationLost)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LocationLost)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
